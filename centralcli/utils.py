@@ -195,7 +195,7 @@ class Utils:
         """
         filename = os.path.abspath(os.path.join(os.path.dirname(__file__), filename))
         with open(filename, "r") as input_file:
-            data = yaml.load(input_file, Loader=yaml.FullLoader)
+            data = yaml.load(input_file, Loader=yaml.SafeLoader)
         return data
 
     @staticmethod
